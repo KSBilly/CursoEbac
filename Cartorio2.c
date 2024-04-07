@@ -125,6 +125,7 @@ for (repetir=1;repetir=1;) //ciclo de repetição
 	printf("\t1.Cadastro de Usuário \n"); //opções selecionaveis pelo usuário
 	printf("\t2.Consulta de Usuário\n");
 	printf("\t3.Excluir Usuário \n"); //fim das opções selecionaveis pelo usuário
+	printf("\t4.Sair do sistema.\n");
 	printf("Opção:");
 
 	scanf("%d", &opcao); // "%d permite o usuario digitar um numero inteiro""& transforma a variavel"
@@ -141,6 +142,10 @@ for (repetir=1;repetir=1;) //ciclo de repetição
 			break;
 		case 3:
 			deletar();
+			break;
+		case 4:
+			printf("obrigado por usar nossos serviços, até a proxima");
+			return 0;
 			break;
 		default:
 			printf ("Opção invalida\n");
