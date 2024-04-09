@@ -110,15 +110,25 @@ int deletar()
 
 int main()//função principal
 {
+	
+setlocale(LC_ALL, "portuguese"); //opção de linguagem selecionada BRASIL
+
 int opcao=0;
 int repetir=1;
+char senha[]="a";
+int comparacao;
+
+printf("### Cartório da Ebac ###\n\n");
+printf ("Digite sua senha:");
+scanf("%s",senha);
+
+comparacao = strcmp (senha,"admin");
+if(comparacao==0)
 	
 for (repetir=1;repetir=1;) //ciclo de repetição
 {
 
 	system ("cls");
-
-	setlocale(LC_ALL, "portuguese"); //opção de linguagem selecionada BRASIL
 
 	printf("### Cartório da Ebac ###\n\n"); //PRINTF acompanhado de PARENTESES E ASPAS adiciona textos na tela de usuario 
 	printf("Olá, por favor, selecione uma opção:\n\n"); //frase de boas vindas
@@ -153,4 +163,7 @@ for (repetir=1;repetir=1;) //ciclo de repetição
 			break;
 	}
 }
+else
+printf("senha incorreta\n");
+system ("pause");
 }
